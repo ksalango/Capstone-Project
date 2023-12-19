@@ -6,8 +6,9 @@
 - [Data](#data)
 - [Notebooks](#notebooks)
 - [References](#references)
+- [Configuration](#configuration)
 - [Getting Started](#getting-started)
-- Weekly To Do List
+- [Weekly To-Do List](#weekly-to-do-list)
 
 
 ## Introduction
@@ -41,8 +42,8 @@ The overarching objective is to deliver a prediction model that is accurate as w
    - Iteratively refine the model based on testing outcomes, incorporating feedback and insights.
 
 ## Data
-
-The data can be downloaded here: 
+You can access the latest project dataset on Google Drive:
+[Download Latest Dataset](https://drive.google.com/drive/folders/103uoc3UW-73YHMsvDNyMVQsZfuzLDKWG?usp=sharing)
 
 ## Notebooks 
 Description of notebooks will go here. 
@@ -50,19 +51,20 @@ Description of notebooks will go here.
 ## References
 link to references: 
 
+## Configuration
+The project configuration settings are stored in the `/settings/capstone_wavepower.yml` file. 
+
 ## Getting Started
 -instructions on how to get started with project will go here. 
 
 
-# Weekly To Do List: 
-[X] Collect Hindcast Data from three relevent grid points
-[ ] Format and clean Hindcast Data
-[ ] Look at labeling for wave power
-[ ] EDA of Hindcast Data
-[ ] baseline model, using time series analysis and linear regression for variables not time dependent.
-This will most likely carry into next week. 
+## Weekly To-Do List
 
-
+- [x] Collect Hindcast Data from three relevant grid points
+- [ ] Format and clean Hindcast Data
+- [ ] Look at labeling for wave power
+- [ ] EDA of Hindcast Data
+- [ ] Build baseline model using time series analysis and linear regression for variables not time-dependent. This will most likely carry into next week.
 
  
 
