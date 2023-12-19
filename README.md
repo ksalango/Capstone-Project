@@ -1,7 +1,7 @@
 # Temporal Dynamics in Wave Power: A Machine Learning Approach
 
 **Table of Contents:**
--[Introduction](#introduction)
+- [Introduction](#introduction)
 - [Methodology](#methodology)
 - [Data](#data)
 - [Notebooks](#notebooks)
