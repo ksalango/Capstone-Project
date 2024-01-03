@@ -15,7 +15,7 @@
 ## Introduction
 Welcome to my Wave Power Predictor project, this project stemms my three-month journey through the BrainStation Data Science Bootcamp. This project seeks to leverage the power of machine learning to forecast wave power at a specific location. Unlike computationally intensive numerical and physics-based models, machine learning offers a potentially more efficient approach.
 
-The foundation of this project lies in compiling a data set from historical buoy data and hindcast model data from similar locations and using this for a machine learning model approach. Looking ahead, the prospect of incorporating real-time data opens the door to forecasting wave power with even greater precision.
+The foundation of this project lies in compiling a data set from historical buoy data and hindcast model data from similar locations and using this for a machine learning model approach. Looking ahead, the prospect of incorporating real-time data opens the door to a live wave energy forecasting model.
 
 The overarching objective is to deliver a prediction model that is accurate as well as robust, addressing a specific location's unique dynamics. The potential applications span from contributing to renewable energy research to serving the interests of avid surf enthusiasts.
 
