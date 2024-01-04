@@ -37,12 +37,15 @@ The overarching objective is to deliver a prediction model that is accurate as w
      
 4. **Baseline Model Development:**
    - Build and train a baseline machine learning model, incorporating time series analysis techniques.
-   - Utilize the hindcast data to establish an initial predictive framework.
+   - Supervised, Regression.
 
 5. **Model Testing and Iteration:**
-   - Test the trained model on the historical dataset, evaluating its performance.
+   - Test model, evaluate performance. 
    - Iteratively refine the model based on testing outcomes, incorporating feedback and insights.
-   - Develop live forecasting. 
+   - Build alternative models.
+   - Feature Engineer.
+    
+6. **Develop Live Forecasting** 
  
 
 ## Data
