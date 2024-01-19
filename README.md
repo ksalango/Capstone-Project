@@ -15,7 +15,7 @@
 ## Introduction
 Welcome to my Wave Power Predictor project, this project stemms my three-month journey through the BrainStation Data Science Bootcamp. This project seeks to leverage the power of machine learning to forecast wave power at a specific location. Unlike computationally intensive numerical and physics-based models, machine learning offers a potentially more efficient approach.
 
-The foundation of this project lies in compiling a data set from historical buoy data and hindcast model data from similar locations and using this for a machine learning model approach. Looking ahead, the prospect of incorporating real-time data opens the door to a live wave energy forecasting model.
+The foundation of this project lies in compiling a data set from historical buoy data and hindcast model data from similar locations and using this for a machine learning approach to better understand local wave energy dynamics and build a forecasting model. Looking ahead, the prospect of incorporating real-time data opens the door to a live wave energy forecasting model.
 
 The overarching objective is to deliver a prediction model that is accurate as well as robust, addressing a specific location's unique dynamics. The potential applications span from contributing to renewable energy research to serving the interests of avid surf enthusiasts.
 
@@ -32,16 +32,27 @@ The overarching objective is to deliver a prediction model that is accurate as w
 
 3. **Historical Data Processing and EDA:**
    - Clean and explore the historical dataset, ensuring alignment with hindcast data in terms of temporal features.
-   - Identify and incorporate additional relevant features for model testing.
-   - Build working Data Frame. 
+   - Look at Distributions of wave power and other features.
+   - Build Working Data Frame.
+   - Preprocess data for Traditional Time Series Modelling:
+      - A forecast interval of one day will be used.
+      - Identify Gaps in historical and buoy data.
+      - Handle missing values appropriately.
+   - Preprocess data for other Time Series Modelling; Random Forest, Neural Networks:
+      - Feature Engineering
+   - Identify and incorporate additional relevant features for all models.
+   
      
-4. **Baseline Model Development:**
-   - Build and train a baseline machine learning model, incorporating time series analysis techniques.
-   - Supervised, Regression.
+4. **Baseline and Model Development:**
+   - Supervised Machine Learning:
+     - Linear Regression will be used as baseline model for Time Series.
+     - Traditional Time Series: Seasonal decomposition, SARIMA
+     - Random Forest
+     - Neural Networks
 
 5. **Model Testing and Iteration:**
-   - Test model, evaluate performance. 
-   - Iteratively refine the model based on testing outcomes, incorporating feedback and insights.
+   - Test model(s), evaluate performance. 
+   - Iteratively refine the model(s) based on testing outcomes, incorporating feedback and insights.
    - Build alternative models.
    - Feature Engineer.
     
@@ -53,7 +64,12 @@ You can access the latest project dataset on Google Drive:
 [Download Latest Dataset](https://drive.google.com/drive/folders/103uoc3UW-73YHMsvDNyMVQsZfuzLDKWG?usp=sharing)
 
 ## Notebooks 
-Description of notebooks will go here. 
+ - hindcast_vertical and hindcast_horizontal: Different arrangements of hindcast data from 3 seperate gridpoints.
+ - buoy_data_cleaning: EDA of historical buoy data, distributions and handling data quality issues.
+ - buoy_data_eda: Historical buoy EDA
+ - combined_working_df: Hindcast data from grid point close to laperouse buoy, combined with historical data from buoy. General EDA, insights, distributions, correlations.
+ - Wave_Energy_TS: Time Series preprocessing and modelling for wave energy 'ETOT' from Hindcast Data
+ - Wave_Period_Height_TS: Time series preprocessing and modelling for wave hieght and wave period from historical buoy data.
 
 ## References
 link to references: 
@@ -67,10 +83,11 @@ The project configuration settings are stored in the `/settings/capstone_wavepow
 
 ## Weekly To-Do List
 
-- [x] Collect Hindcast Data from three relevant grid points
-- [X] Format and clean Hindcast Data
-- [X] Format and clean Historical Buoy Data
-- [X] EDA of Hindcast Data and Buoy Data
+- [x] Finsih Preprocessing for Time Series
+- [X] Build baseline model using time series analysis and linear regression
+- [ ] Time Series Modelling with ARIMA, for wave energy
+- [ ] Time Series Modelling for Wave Height and Period
+- [ ] Feature Engineering
 - [ ] Build baseline model using time series analysis and linear regression
 
 ## Data Dictionary
