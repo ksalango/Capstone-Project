@@ -83,7 +83,75 @@ The scope of the project at this point focuses on directory: Forecasting_WH_WP. 
  - 6_Simultaneous_Forecast: Second phase of Time Series modelling of wave height and wave period focusing on simultaneous forecast of both features. 
 
 ## References
-link to references: 
+<details>
+  <summary>Click to expand references</summary>
+
+1. **Guide to Wave Analysis and Forecasting**
+   - Link: [Guide to wave Analysis and Forecasting](https://repository.oceanbestpractices.org/bitstream/handle/11329/121/702_en_for_approval.pdf?sequence=4&isAllowed=y)
+
+2. **MEDS Tofino**
+   - Link: [MEDS Tofino](http://www.waveworkshop.org/11thWaves/Papers/ThomasSwail_LongTermCoastalWaves2009.pdf)
+
+3. **Wave Variance Spectra Theory**
+   - Link: [Wave Variance Spectra Theory](https://www.oceanopticsbook.info/view/surfaces/level-2/wave-variance-spectra-theory)
+
+4. **A Machine Learning Framework to Forecast Wave Conditions**
+   - Link: [A Machine Learning Framework to Forecast Wave Conditions](https://cdip.ucsd.edu/themes/media/docs/publications_references/journal_articles/A_Machine_Learning_Framework_to_Forecast_Wave_Conditions.pdf)
+
+5. **Wave Energy Equation and Bathymetry 3D Model of Tofino and Ucluelet**
+   - Link: [Wave energy equation and bathymetry 3D model of Tofino and Ucluelet](https://natural-resources.canada.ca/sites/www.nrcan.gc.ca/files/canmetenergy/files/pubs/CHC-TR-051.pdf) (Page 31)
+
+6. **Waves, Swell, and Wind Waves**
+   - Link: [Waves, Swell, and Wind Waves](https://www.noaa.gov/jetstream/ocean/waves)
+
+7. **Tidal Data**
+   - Link: [Tidal Data](https://www.tides.gc.ca/en/stations/08615/1980-01-01?tz=PST&unit=m)
+
+8. **Digital Bathymetry**
+   - Link: [Digital Bathymetry](https://www.ncei.noaa.gov/maps/iho_dcdb/)
+
+9. **Nearshore Wave Energy Resources for Western Vancouver Island, BC**
+   - Link: [Nearshore Wave Energy Resources for Western Vancouver Island, BC](https://natural-resources.canada.ca/sites/www.nrcan.gc.ca/files/canmetenergy/files/pubs/CHC-TR-051.pdf)
+
+10. **MSC50 Hindcast Information**
+    - Link: [MSC50 Hindcast Information](http://oceanweather.net/MSC50WaveAtlas/)
+
+11. **MSC50 Wind and Wave Reanalysis**
+    - Link: [MSC50 Wind and Wave Reanalysis](https://www.oceanweather.com/about/papers/The%20MSC50%20Wind%20and%20Wave%20Reanalysis.pdf)
+
+12. **Grid of MSC50**
+    - Link: [Grid of MSC50](https://www.google.com/maps/d/edit?hl=en&mid=1vfmJCVehadWT2z4_9cO7pm1ubvZetgI&ll=49.3890792222663%2C-128.76574706926476&z=7)
+
+13. **Laperouse Buoy Website**
+    - Link: [Laperouse Buoy Website](https://www.ndbc.noaa.gov/station_page.php?station=46206)
+
+14. **Long Term Coastal Waves**
+    - Link: [Long Term Coastal Waves](http://www.waveworkshop.org/11thWaves/Papers/ThomasSwail_LongTermCoastalWaves2009.pdf)
+
+15. **Simulating and Forecasting Ocean Wave Energy in Western Canada**
+    - Link: [Simulating and Forecasting Ocean Wave Energy in Western Canada](https://www.uvic.ca/research/projects/wcwi/assets/docs/publications/Simulating%20and%20Forecasting%20Ocean%20Wave%20Energy%20in%20Western%20Canada%20_%20OE.pdf)
+
+16. **Definitions of Tidal Data**
+    - Link: [Definitions of Tidal Data](https://tides.gc.ca/tides/en/definitions-content-tides-and-currents#Datum)
+
+17. **Wave Energy Theory**
+    - Link: [Wave Energy Theory](https://www.oceanopticsbook.info/view/surfaces/level-2/wave-variance-spectra-theory)
+
+18. **Waves Study**
+    - Link: [Waves Study](https://www.uio.no/studier/emner/matnat/geofag/GEO4964/v20/pensumliste/notes_waves.pdf)
+
+19. **Capture Width Ratio of Wave Energy Converters**
+    - Link: [A database of capture width ratio of wave energy converters](https://www.researchgate.net/publication/276452440_A_database_of_capture_width_ratio_of_wave_energy_converters#:~:text=The%20average%20capture%2Dwidth%2Dratio,%2C%202022).%20…
+
+20. **Wave Energy, Wind, Solar**
+    - Link: [Wave Energy, Wind, Solar](https://blog.sintef.com/sintefenergy/wave-energy-wind-solar/)
+
+21. **Surf Education**
+    - Link: [Surf Education](https://education.nationalgeographic.org/resource/surfs/)
+
+22. **LOLA - What Does It Stand For?**
+    - Link: [What Does LOLA Stand For?](https://www.surfline.com
+</details>
 
 ## Configuration
 The project configuration settings are stored in the `/settings/capstone_wavepower.yml` file. 
@@ -100,7 +168,7 @@ In bash:
 - Access Data through google drive (Link in Data)
 
 ## Conclusion/Next Steps
-An in depth conclusion of project thus far is found at the end of Notebook 6. Separate models have been obtained to forecast wave height and wave period simultaneously with error range below the set error ranges for this analysis. Further feature analysis will be done from results of modelling.  Other steps include incorporating more components in forecast such as swell direction, and wind speed and direction. As well as exploring vector autoregression and neural networks.   
+An in depth conclusion of project thus far is found at the end of Notebook 6. Separate models have been obtained to forecast wave height and wave period simultaneously with error range below the set error ranges for this analysis. Further feature analysis will be done from results of modelling.  Other steps include incorporating more components in forecast such as swell direction, and wind speed and direction. As well as exploring vector autoregression and neural networks. Incorporating bathymmetry data may also be explored.   
 
 ## (Weekly) To-Do List
 

@@ -2,3 +2,5 @@
 Capstone_Project/Data/
 .DS_Store
 Notebooks/.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
