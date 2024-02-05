@@ -161,7 +161,7 @@ In bash:
 - Set up environment using .yml file: 
    - conda env create -f capstone_wavepower.yml
       conda activate environment
-- git clone https://github.com/your-username/Capstone-Project.git
+- git clone https://github.com/ksalango/Capstone-Project.git
    - cd Capstone-Project
    - Navigate to Notebooks, navigate to Forecasting_WH_WP Directory
    - Launch Notebook
