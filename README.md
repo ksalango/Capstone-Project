@@ -25,7 +25,7 @@ The overarching objective of the project thusfar is to deliver a model or set of
 
  
  ## The methodology is divided into the following key steps:
-This is a highe level overview of the methodology used in this project. More detailed methodologies are outlined at the begining of each notebook. 
+This is a high level overview of the methodology used in this project. More detailed methodologies are outlined at the beginning of each notebook. 
 1. **Setting Benchmarks for Error Range:**
    - The benchmark of 2 feet or 0.60 meters, was decided for wave height.The benchmark range for error in wave height was decided based upon sufline's current daily forecasts that are given within a usual range of 2 feet.
    - The benchmark of 3 seconds was decided for wave period.  The benchmark for wave period was decided based on research into wave period length differentiation based on wind swell or ground swell. Generally wind swell shows wave periods of 1 to about 10 seconds, 10 to about 20 seconds is recognized as ground swell. The difference of 3 seconds is not generally indicative of a change from wind swell to ground swell.
