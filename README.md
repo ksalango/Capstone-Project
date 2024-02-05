@@ -1,4 +1,4 @@
-# Temporal Dynamics in Wave Power: A Machine Learning Approach
+# Wave Prediction: Building my own Surf Forecast
 
 **Table of Contents:**
 - [Introduction](#introduction)
@@ -8,68 +8,79 @@
 - [References](#references)
 - [Configuration](#configuration)
 - [Getting Started](#getting-started)
-- [Weekly To-Do List](#weekly-to-do-list)
+- [Conclusion/Next Steps](#conclusionnext-steps)
+- [(Weekly) To-Do List](#(weekly)-to-do-list)
 - [Data Dictionary](#Data-Dictionary)
 
 
 ## Introduction
-Welcome to my Wave Power Predictor project, this project stemms my three-month journey through the BrainStation Data Science Bootcamp. This project seeks to leverage the power of machine learning to forecast wave power at a specific location. Unlike computationally intensive numerical and physics-based models, machine learning offers a potentially more efficient approach.
+Welcome to my wave prediction project, this project stemms my three-month journey through the BrainStation Data Science Bootcamp. In this project I aim to build my own surf forecast. The idea for this project started when Magic Seaweed was discontinued in 2022. It was an online surf forecast that I found to be more accurate. Now surfline is widely used as the main surf forecasting website for surfers around the world. My goal in this project is to create a surf forecast for my local area that is more accurate than the forecast for my area on surfline.  
 
-The foundation of this project lies in compiling a data set from historical buoy data and hindcast model data from similar locations and using this for a machine learning approach to better understand local wave energy dynamics and build a forecasting model. Looking ahead, the prospect of incorporating real-time data opens the door to a live wave energy forecasting model.
+The foundation of this project lies in compiling a data set from historical buoy data and hindcast model data from a similar location and using this for a machine learning approach to better understand local wave dynamics and build a forecasting model. Looking ahead, the prospect of incorporating real-time data opens the door to a live surf forecasting model for a specific location that produces more precise forecasts. 
 
-The overarching objective is to deliver a prediction model that is accurate as well as robust, addressing a specific location's unique dynamics. The potential applications span from contributing to renewable energy research to serving the interests of avid surf enthusiasts.
+There are many different components of a surf forecast including, wave height, wave period, swell direction, wind speed and direction. For the scope of this project I chose to focus on forecasting wave height and wave period. In later stages of this project I hope to add other components as more machine learning methods will be explored. 
+
+The overarching objective of the project thusfar is to deliver a model or set of models that predict wave height and wave period with an error range that is below the set benchmarks as well as better understand the relationship between wave height and wave period, and how this can affect the methods applied in forecasting both. 
+
 
  
  ## The methodology is divided into the following key steps:
-
-1. **Data Collection:**
+This is a highe level overview of the methodology used in this project. More detailed methodologies are outlined at the begining of each notebook. 
+1. **Setting Benchmarks for Error Range:**
+   - The benchmark of 2 feet or 0.60 meters, was decided for wave height.The benchmark range for error in wave height was decided based upon sufline's current daily forecasts that are given within a usual range of 2 feet.
+   - The benchmark of 3 seconds was decided for wave period.  The benchmark for wave period was decided based on research into wave period length differentiation based on wind swell or ground swell. Generally wind swell shows wave periods of 1 to about 10 seconds, 10 to about 20 seconds is recognized as ground swell. The difference of 3 seconds is not generally indicative of a change from wind swell to ground swell.
+2. **Data Collection:**
    - Gather hindcast data, representing historical wave conditions.
-   - Collected additional historical data for testing and validation.
+   - Collected historical buoy data.
+   - Data was requested from Oceans and Fishers Cananda.
 
-2. **Hindcast Data Processing and Exploratory Data Analysis (EDA):**
-   - Conduct cleaning and exploratory data analysis on the hindcast dataset.
-   - Explored temporal patterns and key features influencing wave power.
+3. **Create a Combined Working Data Frame:**
+   - Convert data where necessary into workable format for analysis.
+   - Clean buoy data, and deal with error flags.
+   - Assess Hindcast Data.
+   - Combine data, a total of 28 years of data is obtained: 1988-2016.
 
-3. **Historical Data Processing and EDA:**
-   - Clean and explore the historical dataset, ensuring alignment with hindcast data in terms of temporal features.
-   - Look at Distributions of wave power and other features.
-   - Build Working Data Frame.
-   - Preprocess data for Traditional Time Series Modelling:
-      - A forecast interval of one day will be used.
-      - Identify Gaps in historical and buoy data.
-      - Handle missing values appropriately.
-   - Preprocess data for other Time Series Modelling; Random Forest, Neural Networks:
-      - Feature Engineering
-   - Identify and incorporate additional relevant features for all models.
-   
-     
+3. **Data Processing and EDA:**
+   - Clean and explore working dataframe.
+   - Look at Distributions of features.
+   - Look at relationships between features.
+   - Preprocess data for Time Series Modelling:
+      - A general dataframe is created for Time Series modelling.
+      - Based on modelling approach data is reorganized and feature engineering is done.
+      - Additional relevant features are incorportated.
+      
 4. **Baseline and Model Development:**
-   - Supervised Machine Learning:
-     - Linear Regression will be used as baseline model for Time Series.
-     - Traditional Time Series: Seasonal decomposition, SARIMA
+   - This project focuses on different methods for forecasting and all methods are compared and contrasted.
+   - This project focuses on Supervised Machine Learning:
+     - Baseline models: Univariate traditional time series; ARIMA, Linear Regression for multivariate time series.
      - Random Forest
-     - Neural Networks
+     - XGBoost 
+     - Vector Auto Regression and Neural Networks (Still in Development)
 
 5. **Model Testing and Iteration:**
-   - Test model(s), evaluate performance. 
+   - The same time series train test split is maintained throughout the project: 
+      - split point defined as: '2006-01-01'
+      - 1988-01-01 to split point defined as train.
+      - split point to 2016-01-01 is defined as test.
    - Iteratively refine the model(s) based on testing outcomes, incorporating feedback and insights.
-   - Build alternative models.
    - Feature Engineer.
     
 6. **Develop Live Forecasting** 
- 
+   - This part of the project is still in development. 
 
 ## Data
 You can access the latest project dataset on Google Drive:
 [Download Latest Dataset](https://drive.google.com/drive/folders/103uoc3UW-73YHMsvDNyMVQsZfuzLDKWG?usp=sharing)
 
 ## Notebooks 
- - hindcast_vertical and hindcast_horizontal: Different arrangements of hindcast data from 3 seperate gridpoints.
- - buoy_data_cleaning: EDA of historical buoy data, distributions and handling data quality issues.
- - buoy_data_eda: Historical buoy EDA
- - combined_working_df: Hindcast data from grid point close to laperouse buoy, combined with historical data from buoy. General EDA, insights, distributions, correlations.
- - Wave_Energy_TS: Time Series preprocessing and modelling for wave energy 'ETOT' from Hindcast Data
- - Wave_Period_Height_TS: Time series preprocessing and modelling for wave hieght and wave period from historical buoy data.
+
+The scope of the project at this point focuses on directory: Forecasting_WH_WP. The other directory explores wave energy which is a separate branch of this project. The Notebooks in Forecasting_WH_WP directory are numbered reflecting the general workflow of the Project (1-6). General descriptions of notebooks in specified directory are below. More in depth descriptions are provided in the introduction to each notebook. 
+ - 1_buoy_data_cleaning: This is the starting point for the project. Buoy data cleaning.
+ - 2_combined_working_df: Data sets from Hindcast and buoy are combined. EDA of data. 
+ - 3_Preprocessing_TS: Data is Preprocessed for Time Series modelling. 
+ - 4_Wave_Period_Height_TS: First phase of Time Series modelling for wave height and wave period.  
+ - 5_Ensemble: Continuation of first phase of time series modelling for wave height and wave period, focusing on XGBoost and Random Forest.
+ - 6_Simultaneous_Forecast: Second phase of Time Series modelling of wave height and wave period focusing on simultaneous forecast of both features. 
 
 ## References
 link to references: 
@@ -78,19 +89,30 @@ link to references:
 The project configuration settings are stored in the `/settings/capstone_wavepower.yml` file. 
 
 ## Getting Started
--instructions on how to get started with project will go here. 
+In bash: 
+- Set up environment using .yml file: 
+   - conda env create -f capstone_wavepower.yml
+      conda activate environment
+- git clone https://github.com/your-username/Capstone-Project.git
+   - cd Capstone-Project
+   - Navigate to Notebooks, navigate to Forecasting_WH_WP Directory
+   - Launch Notebook
+- Access Data through google drive (Link in Data)
 
+## Conclusion/Next Steps
+An in depth conclusion of project thus far is found at the end of Notebook 6. Separate models have been obtained to forecast wave height and wave period simultaneously with error range below the set error ranges for this analysis. Further feature analysis will be done from results of modelling.  Other steps include incorporating more components in forecast such as swell direction, and wind speed and direction. As well as exploring vector autoregression and neural networks.   
 
-## Weekly To-Do List
+## (Weekly) To-Do List
 
-- [x] Finsih Preprocessing for Time Series
-- [X] Build baseline model using time series analysis and linear regression
-- [ ] Time Series Modelling with ARIMA, for wave energy
-- [ ] Time Series Modelling for Wave Height and Period
+- [ ] Feature analysis
+- [ ] EDA of other components for forecast
 - [ ] Feature Engineering
-- [ ] Build baseline model using time series analysis and linear regression
+- [ ] Vector AutoRegression for wave height and wave period.
+- [ ] Explore Neural Netowrks for forecasting. 
+
 
 ## Data Dictionary
+This is a general data dictionary for project. As data dictionary changes from notebook to notebook specific data dictionary is included in each noteboke. 
 <details>
   <summary>Data Dictionary</summary>
 
