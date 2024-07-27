@@ -14,7 +14,7 @@
 
 
 ## Introduction
-Welcome to my wave prediction project, this project stemms my three-month journey through the BrainStation Data Science Bootcamp. In this project I aim to build my own surf forecast. The idea for this project started when Magic Seaweed was discontinued in 2022. It was an online surf forecast that I found to be more accurate. Now surfline is widely used as the main surf forecasting website for surfers around the world. My goal in this project is to create a surf forecast for my local area that is more accurate than the forecast for my area on surfline.  
+Welcome to my wave prediction project. In this project I aim to build my own surf forecast. The idea for this project started when Magic Seaweed was discontinued in 2022. It was an online surf forecast that I found to be more accurate. Now surfline is widely used as the main surf forecasting website for surfers around the world. My goal in this project is to create a surf forecast for my local area that is more accurate than the forecast for my area on surfline.  
 
 The foundation of this project lies in compiling a data set from historical buoy data and hindcast model data from a similar location and using this for a machine learning approach to better understand local wave dynamics and build a forecasting model. Looking ahead, the prospect of incorporating real-time data opens the door to a live surf forecasting model for a specific location that produces more precise forecasts. 
 
