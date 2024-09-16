@@ -1,4 +1,4 @@
-# Wave Prediction: Building my own Surf Forecast
+# Wave Prediction for Tofino: Developing a Localized Surf Forecasting Model
 
 **Table of Contents:**
 - [Introduction](#introduction)
@@ -14,13 +14,18 @@
 
 
 ## Introduction
-Welcome to my wave prediction project. In this project I aim to build my own surf forecast. The idea for this project started when Magic Seaweed was discontinued in 2022. It was an online surf forecast that I found to be more accurate. Now surfline is widely used as the main surf forecasting website for surfers around the world. My goal in this project is to create a surf forecast for my local area that is more accurate than the forecast for my area on surfline.  
 
-The foundation of this project lies in compiling a data set from historical buoy data and hindcast model data from a similar location and using this for a machine learning approach to better understand local wave dynamics and build a forecasting model. Looking ahead, the prospect of incorporating real-time data opens the door to a live surf forecasting model for a specific location that produces more precise forecasts. 
+### Background
+Accurate swell forecasts are crucial for coastal management, safety, and recreational activities. The idea for this project originated after the discontinuation of Magic Seaweed in 2022, an online surf forecast platform known for its accuracy. With Surfline now being the predominant surf forecasting website, there remains a need for more precise and locally tailored forecasts for specific regions such as Tofino, BC, Canada.
 
-There are many different components of a surf forecast including, wave height, wave period, swell direction, wind speed and direction. For the scope of this project I chose to focus on forecasting wave height and wave period. In later stages of this project I hope to add other components as more machine learning methods will be explored. 
+### Project Overview
+This project aims to develop an accurate and reliable surf forecast for Tofino, BC, using historical buoy data and hindcast model data through machine learning methods. By leveraging these data sources, the goal is to create a forecasting model that surpasses the accuracy of existing forecasts provided by Surfline for this area.
 
-The overarching objective of the project thusfar is to deliver a model or set of models that predict wave height and wave period with an error range that is below the set benchmarks as well as better understand the relationship between wave height and wave period, and how this can affect the methods applied in forecasting both. 
+### Scope and Objectives
+The initial phase of the project focuses on forecasting wave height and wave period, two key components of surf forecasting. The primary objective is to build a predictive model (or set of models) capable of forecasting these elements within a specified error margin, thus improving upon current benchmarks. Additionally, the project aims to deepen the understanding of the relationship between wave height and wave period to enhance forecasting methodologies.
+
+### Significance
+This research not only seeks to improve surf forecasts for the local community but also contributes to broader coastal management efforts. Accurate forecasts can aid in safety measures, inform recreational activities, and provide insights for future developments in wave prediction models.
 
 
  
